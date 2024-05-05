@@ -224,7 +224,7 @@ def change
 end
 ```
 
-您也可以建立列舉類型，並將列舉欄位新增到現有的資料表。
+你也可以建立列舉類型，並將列舉欄位新增到現有的資料表。
 
 ```ruby
 # db/migrate/20230113024409_add_status_to_articles.rb
@@ -235,7 +235,7 @@ def change
 end
 ```
 
-上述的遷移都是可逆的，但您可以在需要時定義個別的 `#up` 和 `#down` 方法。請務必在刪除列舉類型之前移除任何依賴於該列舉類型的欄位或資料表。
+上述的遷移都是可逆的，但你可以在需要時定義個別的 `#up` 和 `#down` 方法。請務必在刪除列舉類型之前移除任何依賴於該列舉類型的欄位或資料表。
 
 
 ```ruby
@@ -275,7 +275,7 @@ irb> article.status = "deleted"
 ArgumentError: 'deleted' is not a valid status
 ```
 
-要重新命名列舉，您可以使用 `rename_enum`，並同時更新任何模型用法。
+要重新命名列舉，你可以使用 `rename_enum`，並同時更新任何模型用法。
 
 ```ruby
 # db/migrate/20150718144917_rename_article_status.rb
@@ -284,7 +284,7 @@ def change
 end
 ```
 
-要新增新值，您可以使用 `add_enum_value`。
+要新增新值，你可以使用 `add_enum_value`。
 
 ```ruby
 # db/migrate/20150720144913_add_new_state_to_articles.rb
@@ -319,7 +319,7 @@ SELECT n.nspname AS enum_schema,
 
 ## 8. UUID
 
-如果您使用的是早於版本 13.0 的 PostgreSQL，您可能需要啟用特殊擴充功能才能使用 UUID。啟用 `pgcrypto` 擴充功能（PostgreSQL >= 9.4）或 `uuid-ossp` 擴充功能（適用於更早的版本）。
+如果你使用的是早於版本 13.0 的 PostgreSQL，你可能需要啟用特殊擴充功能才能使用 UUID。啟用 `pgcrypto` 擴充功能（PostgreSQL >= 9.4）或 `uuid-ossp` 擴充功能（適用於更早的版本）。
 
 ```ruby
 # db/migrate/20131220144913_create_revisions.rb
@@ -342,7 +342,7 @@ irb> revision.identifier
 => "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11"
 ```
 
-您可以在遷移中使用 `uuid` 類型來定義參考。
+你可以在遷移中使用 `uuid` 類型來定義參考。
 
 ```ruby
 # db/migrate/20150418012400_create_blog.rb
