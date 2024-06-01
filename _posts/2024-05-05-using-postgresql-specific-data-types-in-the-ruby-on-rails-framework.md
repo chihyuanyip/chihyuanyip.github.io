@@ -133,7 +133,7 @@ irb> Event.where("payload->>'kind' = ?", "user_renamed")
 
 ## 5. 範圍類型
 
-此類型對應到 Ruby [Range](https://ruby.dev.org.tw/en/3.3/Range.html) 物件。
+此類型對應到 Ruby [Range](https://ruby-docs.dev.org.tw/en/3.3/Range.html) 物件。
 
 ```ruby
 # db/migrate/20130923065404_create_events.rb
@@ -397,7 +397,7 @@ irb> user.save!
 
 ## 10. 網路位址類型
 
-`inet` 和 `cidr` 類型會對應到 Ruby [IPAddr](https://ruby.dev.org.tw/en/3.3/IPAddr.html) 物件。`macaddr` 類型會對應到一般文字。
+`inet` 和 `cidr` 類型會對應到 Ruby [IPAddr](https://ruby-docs.dev.org.tw/en/3.3/IPAddr.html) 物件。`macaddr` 類型會對應到一般文字。
 
 ```ruby
 # db/migrate/20140508144913_create_devices.rb
